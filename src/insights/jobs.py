@@ -10,7 +10,6 @@ def read(path: str) -> List[Dict]:
     ----------
     path : str
         Full path to file
-
     Returns
     -------
     list
