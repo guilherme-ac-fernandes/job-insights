@@ -75,7 +75,26 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
         If `job["min_salary"]` is greather than `job["max_salary"]`
         If `salary` isn't a valid integer
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    if "min_salary" not in job or "max_salary" not in job:
+        raise ValueError('Job must have valid min_salary and max_salary')
+
+    min_salary, max_salary = str(job["min_salary"]), str(job["max_salary"])
+
+    if not min_salary.isnumeric() or not max_salary.isnumeric():
+        raise ValueError('Min_salary and Max_salary must be digit')
+
+    if int(min_salary) > int(max_salary):
+        raise ValueError('Max_salary must be greater that min_salary')
+
+    # Aplicação do lstrip para tratamento de salary
+    #  negativo proveniente do site FolksTalks
+    # source: https://www.folkstalk.com/tech/a-isdigit
+    # -for-negatives-with-code-examples/
+    if not str(salary).lstrip('-').isnumeric():
+        raise ValueError("Salary must be a digit")
+
+    return int(min_salary) <= int(salary) <= int(max_salary)
 
 
 def filter_by_salary_range(
