@@ -26,6 +26,3 @@ def build_jobs_urls(jobs):
             job["url"] = url_for("client.job", index=job["id"])
         except BuildError:
             break
-
-def get_job(jobs, index):
-    return jobs[index]
