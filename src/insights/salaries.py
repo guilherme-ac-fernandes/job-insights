@@ -17,12 +17,18 @@ def get_max_salary(path: str) -> int:
     int
         The maximum salary paid out of all job opportunities
     """
-    jobs = read(path)
-    all_max_salary = set()
-    for job in jobs:
-        if not job["max_salary"] == '' and job["max_salary"].isnumeric():
-            all_max_salary.add(int(job["max_salary"]))
-    return max(all_max_salary)
+    # jobs = read(path)
+    # all_max_salary = set()
+    # for job in jobs:
+    #     if not job["max_salary"] == '' and job["max_salary"].isnumeric():
+    #         all_max_salary.add(int(job["max_salary"]))
+    # return max(all_max_salary)
+
+    max_salary_set = {int(job["max_salary"])
+                      for job in read(path)
+                      if not job["max_salary"] == ''
+                      and job["max_salary"].isnumeric()}
+    return max(max_salary_set)
 
 
 def get_min_salary(path: str) -> int:
