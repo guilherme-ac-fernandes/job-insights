@@ -17,7 +17,6 @@ def get_max_salary(path: str) -> int:
     int
         The maximum salary paid out of all job opportunities
     """
-    # raise NotImplementedError
     jobs = read(path)
     all_max_salary = set()
     for job in jobs:
@@ -41,7 +40,6 @@ def get_min_salary(path: str) -> int:
     int
         The minimum salary paid out of all job opportunities
     """
-    # raise NotImplementedError
     jobs = read(path)
     all_min_salary = set()
     for job in jobs:
@@ -73,7 +71,6 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
         If `job["min_salary"]` is greather than `job["max_salary"]`
         If `salary` isn't a valid integer
     """
-    # raise NotImplementedError
     if "min_salary" not in job or "max_salary" not in job:
         raise ValueError('Job must have valid min_salary and max_salary')
 
@@ -86,7 +83,7 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
         raise ValueError('Max_salary must be greater that min_salary')
 
     # Aplicação do lstrip para tratamento de salary
-    #  negativo proveniente do site FolksTalks
+    # negativo proveniente do site FolksTalks
     # source: https://www.folkstalk.com/tech/a-isdigit
     # -for-negatives-with-code-examples/
     if not str(salary).lstrip('-').isnumeric():
@@ -113,7 +110,6 @@ def filter_by_salary_range(
     list
         Jobs whose salary range contains `salary`
     """
-    # raise NotImplementedError
     # return [job for job in jobs if matches_salary_range(job, salary)]
     all_jobs = []
     for job in jobs:
