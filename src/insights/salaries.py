@@ -112,10 +112,14 @@ def filter_by_salary_range(
     """
     # return [job for job in jobs if matches_salary_range(job, salary)]
     all_jobs = []
+    all_errors = []
     for job in jobs:
         try:
             if matches_salary_range(job, salary):
                 all_jobs.append(job)
         except ValueError as error:
-            print(error)
+            all_errors.append(error)
+        # finally:
+            # if len(all_errors) > 0:
+            #     print(f'{len(all_errors)} found')
     return all_jobs
