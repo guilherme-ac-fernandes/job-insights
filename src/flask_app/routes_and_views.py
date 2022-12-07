@@ -20,7 +20,6 @@ from src.flask_app.more_insights import (
     slice_jobs,
     get_int_from_args,
     build_jobs_urls,
-    get_job,
 )
 
 bp = Blueprint("client", __name__, template_folder="templates")
@@ -80,30 +79,21 @@ def list_jobs():
     return render_template("list_jobs.jinja2", ctx=ctx)
 
 
-# @bp.errorhandler(404)
-# def page_not_found(error):
-#     # return render_template('404.html'), 404
-#     md = """
-#               <h2 align="center">
-#                   Not Found
-#               </h2>
-#           """
-#     return render_template("index.jinja2", md=md), 404
-
-
 # Implementação da rota de /job/<index> baseada na aplicação
 # criado no vídeo do canal freeCodeCamp
 # source: https://www.youtube.com/watch?v=Z1RJmh_OqeA
 
 
 @bp.route("/job/<index>")
-# @bp.route("/job/<int:index>")
 def job(index):
+    int_index = int(index)
     jobs = read(path="data/jobs.csv")
-    print(len(jobs))
-    job_index = get_job(jobs, int(index))
     # return render_template("job.jinja2", job=job_index), 200
-
+    if 0 <= int_index <= len(jobs):
+        job_index = jobs[int_index]
+        return render_template("job.jinja2", job=job_index), 200
+    else:
+        abort(404)
     # test 1
     # if job_index:
     #     return render_template("job.jinja2", job=job_index), 200
@@ -111,16 +101,16 @@ def job(index):
     #     return render_template("not_found_job.jinja2"), 404
 
     # test 2
-    try:
-        return render_template("job.jinja2", job=job_index), 200
-    except IndexError:
-        # md = """
-        #     <h2 align="center">
-        #         Not Found
-        #     </h2>
-        # """
-        # return render_template("index.jinja2", md=md), 404
-        abort(404)
+    # try:
+    #     return render_template("job.jinja2", job=job_index), 200
+    # except IndexError:
+    #     # md = """
+    #     #     <h2 align="center">
+    #     #         Not Found
+    #     #     </h2>
+    #     # """
+    #     # return render_template("index.jinja2", md=md), 404
+    #     abort(404)
 
 
 # @bp.errorhandler(404)
