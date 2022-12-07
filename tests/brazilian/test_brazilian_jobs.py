@@ -2,7 +2,7 @@ import random
 from src.pre_built.brazilian_jobs import read_brazilian_file
 
 
-FILE_PATH = 'tests/mocks/brazilians_jobs.csv'
+FILE_PATH = "tests/mocks/brazilians_jobs.csv"
 
 index = random.randint(1, len(read_brazilian_file(FILE_PATH)) - 1)
 
