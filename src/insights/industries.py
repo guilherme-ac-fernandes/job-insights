@@ -24,9 +24,8 @@ def get_unique_industries(path: str) -> List[str]:
     #         unique_industries.add(industry["industry"])
     # return list(unique_industries)
 
-    industries = read(path)
     return {industry["industry"]
-            for industry in industries
+            for industry in read(path)
             if not industry["industry"] == ''}
 
 
