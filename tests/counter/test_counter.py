@@ -1,4 +1,3 @@
-import pytest
 from src.pre_built.counter import count_ocurrences
 
 # Resolução desenvolvida com o auxílio dos instrutores de Ciência
@@ -13,5 +12,3 @@ def test_counter():
     assert count_ocurrences("data/jobs.csv", 'JavaScriPt') == 122
     assert count_ocurrences("data/jobs.csv", 'salário') == 0
     assert count_ocurrences("data/jobs.csv", 'título') == 0
-    with pytest.raises(FileNotFoundError):
-        count_ocurrences("data/jobs.json", 'python')
