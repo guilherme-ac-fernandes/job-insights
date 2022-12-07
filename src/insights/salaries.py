@@ -23,7 +23,6 @@ def get_max_salary(path: str) -> int:
     for job in jobs:
         if not job["max_salary"] == '' and job["max_salary"].isnumeric():
             all_max_salary.add(int(job["max_salary"]))
-    print(max(all_max_salary))
     return max(all_max_salary)
 
 
@@ -48,7 +47,6 @@ def get_min_salary(path: str) -> int:
     for job in jobs:
         if not job["min_salary"] == '' and job["min_salary"].isnumeric():
             all_min_salary.add(int(job["min_salary"]))
-    print(min(all_min_salary))
     return min(all_min_salary)
 
 
