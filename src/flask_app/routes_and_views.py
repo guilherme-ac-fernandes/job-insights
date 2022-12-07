@@ -88,39 +88,15 @@ def list_jobs():
 def job(index):
     int_index = int(index)
     jobs = read(path="data/jobs.csv")
-    # return render_template("job.jinja2", job=job_index), 200
     if 0 <= int_index <= len(jobs):
         job_index = jobs[int_index]
         return render_template("job.jinja2", job=job_index), 200
     else:
+        # Utilização do abort para tratamento de erro proveniente
+        # da publicação no DigitalOcean
+        # source: https://www.digitalocean.com/community/
+        # tutorials/how-to-handle-errors-in-a-flask-application
         abort(404)
-    # test 1
-    # if job_index:
-    #     return render_template("job.jinja2", job=job_index), 200
-    # else:
-    #     return render_template("not_found_job.jinja2"), 404
-
-    # test 2
-    # try:
-    #     return render_template("job.jinja2", job=job_index), 200
-    # except IndexError:
-    #     # md = """
-    #     #     <h2 align="center">
-    #     #         Not Found
-    #     #     </h2>
-    #     # """
-    #     # return render_template("index.jinja2", md=md), 404
-    #     abort(404)
-
-
-# @bp.errorhandler(404)
-# def page_not_found(error):
-#     md = """
-#              <h2 align="center">
-#                  Not Found
-#              </h2>
-#          """
-#     return render_template("index.jinja2", md=md), 404
 
 
 def init_app(app: Flask):
