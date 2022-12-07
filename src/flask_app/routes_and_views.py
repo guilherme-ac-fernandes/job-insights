@@ -85,7 +85,10 @@ def list_jobs():
 def job(index):
     jobs = read(path="data/jobs.csv")
     job_index = get_job(jobs, int(index))
-    return render_template("job.jinja2", job=job_index)
+    if job_index:
+        return render_template("job.jinja2", job=job_index), 200
+    else:
+        return render_template("job.jinja2", job={}), 404
 
 
 def init_app(app: Flask):
