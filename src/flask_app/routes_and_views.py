@@ -90,6 +90,8 @@ def job(index):
     jobs = read(path="data/jobs.csv")
     if 0 <= int_index <= len(jobs):
         job_index = jobs[int_index]
+        # Retorno do status code de 200 proveniente da Documentação do Flask
+        # source: https://flask.palletsprojects.com/en/1.1.x/quickstart/
         return render_template("job.jinja2", job=job_index), 200
     else:
         # Utilização do abort para tratamento de erro proveniente
