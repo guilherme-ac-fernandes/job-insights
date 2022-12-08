@@ -16,7 +16,7 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 | `filter_by_industry` | A partir de uma lista de dicionários, retorna uma lista filtrada pela indústria informada como parâmetro | `src/insights/industries.py` |
 | `matches_salary_range` | A partir de um dicionário, retorna True ou False se o salário informado está dentro da faixa monetária | `src/insights/salaries.py` |
 | `filter_by_salary_range` | A partir de uma lista de dicionários, utiliza a função `matches_salary_range` para filtrar as vagas com salário dentro da faixa | `src/insights/salaries.py` |
-
+<br />
 </details>
 
 <details>
@@ -27,9 +27,10 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 | `test_counter` | Implementação dos testes para função `count_ocurrences` | `tests/counter/test_counter.py` |
 | `test_brazilian_jobs` | Implementação dos testes para função `read_brazilian_file` | `tests/brazilian/test_brazilian_jobs.py` |
 | `test_sort_by_criteria` | Implementação dos testes para função `sort_by` | `tests/sorting/test_sorting.py` |
+<br />
 </details>
 
-<br />
+
 
 ### Instruções
 
@@ -64,7 +65,6 @@ Para rodar a aplicação dockerizada:
 docker-compose up -d // para subir o container
 docker-compose down // para parar o container
 ```
-<br />
 
 ### Demonstração
 
