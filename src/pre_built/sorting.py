@@ -4,20 +4,7 @@ from typing import List, Dict
 
 
 def max_salary_key(job: Dict) -> int:
-    """
-    Gets max_salary as a sorting key.
-
-    Missing information is treated as the lowest possible value.
-
-    Parameters
-    ----------
-    job : dict
-        Dict represeting a job from the dataset.
-
-    Returns
-    -------
-    Job's max salary as an int, or -infinite.
-    """
+    """Gets max_salary as a sorting key"""
     try:
         return int(job["max_salary"])
     except (KeyError, TypeError, ValueError):
@@ -25,20 +12,7 @@ def max_salary_key(job: Dict) -> int:
 
 
 def min_salary_key(job: Dict) -> int:
-    """
-    Gets min_salary as a sorting key.
-
-    Missing information is treated as the highest possible value.
-
-    Parameters
-    ----------
-    job : dict
-        Dict represeting a job from the dataset.
-
-    Returns
-    -------
-    Job's min salary as an int, or infinite.
-    """
+    """Gets min_salary as a sorting key"""
     try:
         return int(job["min_salary"])
     except (KeyError, TypeError, ValueError):
@@ -46,20 +20,7 @@ def min_salary_key(job: Dict) -> int:
 
 
 def date_posted_key(job: Dict) -> date:
-    """
-    Gets date_posted as a sorting key.
-
-    Missing information is treated as the lowest possible value.
-
-    Parameters
-    ----------
-    job : dict
-        Dict represeting a job from the dataset.
-
-    Returns
-    -------
-    Job's date_posted as a date object.
-    """
+    """Gets date_posted as a sorting key"""
     try:
         return date.fromisoformat(job["date_posted"])
     except (KeyError, TypeError, ValueError):
@@ -67,20 +28,7 @@ def date_posted_key(job: Dict) -> date:
 
 
 def sort_by(jobs: List[Dict], criteria: str) -> None:
-    """
-    Sorts jobs by a given criteria, in-place.
-
-    Sorting must be descending, except for `min_salary` criteria.
-    Jobs missing the criteria should end up last.
-    Invalid criteria should raise ValueError.
-
-    Parameters
-    ----------
-    jobs : list
-        List of dicts representing the jobs.
-    criteria : str
-        One of `min_salary`, `max_salary` or `date_posted`.
-    """
+    """Sorts jobs by a given criteria, in-place"""
     criteria_keys = {
         "date_posted": date_posted_key,
         "max_salary": max_salary_key,
