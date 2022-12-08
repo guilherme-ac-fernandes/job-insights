@@ -1,6 +1,6 @@
 # Projeto Job Insights 👮🏻‍♂️👩🏼‍🚒👷🏾
 
-Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos.
+Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos. A página inicial e de pesquisa por vaga foram criadas pela [Trybe](https://www.betrybe.com), sendo necessárias as funções descritas a seguir para o funcionamento correto, entretando a página de detalhes de uma vaga foi construída baseada na estrutura já criada.
 
 <details>
   <summary><strong>Descrição das funções criadas:</strong></summary><br />
