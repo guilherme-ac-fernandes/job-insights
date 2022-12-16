@@ -1,6 +1,6 @@
 # Projeto Job Insights 👮🏻‍♂️👩🏼‍🚒👷🏾
 
-Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos. As páginas inicial e de pesquisa por vaga foram desenvolvidas pela [Trybe](https://www.betrybe.com), utilizando as funções criadas e descritas a seguir para o funcionamento correto da filtragem dos dados. Mediante a estrutura já presente foi desenvolvido a página de detalhes de uma vaga. 
+Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos. As páginas inicial e de pesquisa por vaga foram desenvolvidas pela [Trybe](https://www.betrybe.com), utilizando as funções criadas e descritas a seguir para o funcionamento correto da filtragem dos dados. Mediante a estrutura já presente, foi desenvolvido a página de detalhes de uma vaga. 
 
 <details>
   <summary><strong>Descrição das funções criadas:</strong></summary><br />
@@ -8,10 +8,10 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 | Função | Descrição | Localização |
 |---|---|---|
 | `read` | Função recebe o caminho do arquivo `csv` e retorna os dados em uma lista de dicionários | `src/insights/jobs.py` |
-| `get_unique_job_types` | A partir do caminho do arquivo e retorna todos os tipos de empregos | `src/insights/jobs.py` |
-| `get_unique_industries` | A partir do caminho do arquivo e retorna todas as indústrias | `src/insights/industries.py` |
-| `get_max_salary` | A partir do caminho do arquivo e retorna o maior salário presente | `src/insights/salaries.py` |
-| `get_min_salary` | A partir do caminho do arquivo e retorna o menor salário presente | `src/insights/salaries.py` |
+| `get_unique_job_types` | A partir do caminho do arquivo, retorna todos os tipos de empregos | `src/insights/jobs.py` |
+| `get_unique_industries` | A partir do caminho do arquivo, retorna todas as indústrias | `src/insights/industries.py` |
+| `get_max_salary` | A partir do caminho do arquivo, retorna o maior salário presente | `src/insights/salaries.py` |
+| `get_min_salary` | A partir do caminho do arquivo, retorna o menor salário presente | `src/insights/salaries.py` |
 | `filter_by_job_type` | A partir de uma lista de dicionários, retorna uma lista filtrada pelo o tipo de emprego informado como parâmetro | `src/insights/jobs.py` |
 | `filter_by_industry` | A partir de uma lista de dicionários, retorna uma lista filtrada pela indústria informada como parâmetro | `src/insights/industries.py` |
 | `matches_salary_range` | A partir de um dicionário, retorna True ou False se o salário informado está dentro da faixa monetária | `src/insights/salaries.py` |
