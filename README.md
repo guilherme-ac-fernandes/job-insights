@@ -1,6 +1,8 @@
 # Projeto Job Insights 👮🏻‍♂️👩🏼‍🚒👷🏾
 
-Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos. As páginas inicial e de pesquisa por vaga foram desenvolvidas pela [Trybe](https://www.betrybe.com), utilizando as funções criadas e descritas a seguir para o funcionamento correto da filtragem dos dados. Mediante a estrutura já presente, foi desenvolvido a página de detalhes de uma vaga. 
+Consiste em uma aplicação web desenvolvida com Flask contendo informações a partir da análise de um conjunto de dados sobre empregos. As páginas inicial e de pesquisa por vaga foram desenvolvidas pela [Trybe](https://www.betrybe.com), utilizando as funções criadas e descritas a seguir para o funcionamento correto da filtragem dos dados. Mediante a estrutura já presente, foi desenvolvido a página de detalhes de uma vaga.
+
+* Construído utilizando Python e Flask
 
 <details>
   <summary><strong>Descrição das funções criadas:</strong></summary><br />
@@ -54,7 +56,7 @@ Para rodar todos os testes:
 <-- na raiz do projeto -->
 python3 -m pytest
 
-PAra rodar os testes individualmente:
+Para rodar os testes individualmente:
 <-- na raiz do projeto -->
 python3 -m pytest -k test_counter
 python3 -m pytest -k test_brazilian_jobs
