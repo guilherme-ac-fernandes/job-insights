@@ -4,6 +4,8 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 
 * Construído utilizando Python e Flask
 
+<br />
+
 <details>
   <summary><strong>Descrição das funções criadas:</strong></summary><br />
 
@@ -31,6 +33,66 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 | `test_sort_by_criteria` | Implementação dos testes para função `sort_by` | `tests/sorting/test_sorting.py` |
 <br />
 </details>
+
+
+### Estrutura do Projeto
+
+```
+.
+├── images
+│   ├──🔹homepage.png
+│   ├──🔹job.png
+│   ├──🔹job_index.png
+│   └──🔹jobs_filter.png
+├── data
+│   └──🔸jobs.csv
+├── src
+│   ├── flask_app
+│   │   ├── templates
+│   │   │   ├── includes
+│   │   │   │   └──🔸nav.jinja2
+│   │   │   ├──🔸base.jinja2
+│   │   │   ├──🔸index.jinja2
+│   │   │   ├──🔸job.jinja2
+│   │   │   └──🔸list_jobs.jinja2
+│   │   ├──🔸app.py
+│   │   ├──🔸more_insights.py
+│   │   └──🔹routes_and_views.py
+│   ├── insights
+│   │   ├──🔹industries.py
+│   │   ├──🔹jobs.py
+│   │   └──🔹salaries.py
+│   ├── pre_built
+│   │   ├──🔸brazilian_jobs.py
+│   │   ├──🔸counter.py
+│   │   └──🔸sorting.py
+├── tests
+│   ├── brazilian
+│   │   ├──🔸__init__.py
+│   │   ├──🔹test_brazilian_jobs.py
+│   ├── counter
+│   │   ├──🔸__init__.py
+│   │   ├──🔹test_counter.py
+│   ├── mocks
+│   │   └──🔸brazilians_jobs.csv
+│   ├── sorting
+│   │   ├──🔸__init__.py
+│   │   └──🔹test_sorting.py
+│   ├──🔸__init__.py
+│   └──🔸conftest.py
+├──🔸README.md
+├──🔸Dockerfile
+├──🔸docker-compose.yml
+├──🔸dev-requirements.txt
+├──🔸pyproject.toml
+├──🔸requirements.txt
+└──🔸setup.cfg
+
+Legenda:
+🔸 Arquivos desenvolvidos pela Trybe (não foram alterados).
+🔹 Arquivos desenvolvidos por mim.
+
+```
 
 
 
