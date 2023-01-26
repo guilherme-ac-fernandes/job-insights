@@ -39,7 +39,7 @@ Consiste em uma aplicação web desenvolvida com Flask contendo informações a 
 
 ```
 .
-├── images
+├── .images
 │   ├──🔹homepage.png
 │   ├──🔹job.png
 │   ├──🔹job_index.png
